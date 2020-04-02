@@ -1,7 +1,6 @@
 var express = require('express');
 var app = express();
 
-app.use(express.static('public'));
 
 app.get('/', function (req, res) {
   res.send('Hello World!');
@@ -9,7 +8,7 @@ app.get('/', function (req, res) {
 
 app.get('/image', function(req,res) {
   console.log(req.headers);
-  res.sendFile("chequilla.jpg");
+  res.sendfile("chequilla.jpg");
 });
 
 app.listen(3000, function () {
